@@ -4,6 +4,51 @@ public class master {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+
+		// billetes de 10, 20, 50, 100, 200, 500, 1000
+		int montoRecibido, montoCompra, vuelto;
+
+		String in = JOptionPane.showInputDialog("Ingrese el monto de la compra");
+		montoCompra = Integer.parseInt(in);
+		in = JOptionPane.showInputDialog("Ingrese el monto recibido");
+		montoRecibido = Integer.parseInt(in);
+
+		vuelto = montoRecibido - montoCompra;
+
+		// Calculo la cantidad de billetes necesarios para cada denominación
+		int billetes1000 = vuelto / 1000;
+		vuelto = vuelto % 1000;
+		int billetes500 = vuelto / 500;
+		vuelto = vuelto % 500;
+		int billetes200 = vuelto / 200;
+		vuelto = vuelto % 200;
+		int billetes100 = vuelto / 100;
+		vuelto = vuelto % 100;
+		int billetes50 = vuelto / 50;
+		vuelto = vuelto % 50;
+		int billetes20 = vuelto / 20;
+		vuelto = vuelto % 20;
+		int billetes10 = vuelto / 10;
+
+		// informo
+		System.out.println("El vuelto es: ");
+		if (billetes1000 > 0)
+			System.out.println(billetes1000 + " billetes de 1000");
+		if (billetes500 > 0)
+			System.out.println(billetes500 + " billetes de 500");
+		if (billetes200 > 0)
+			System.out.println(billetes200 + " billetes de 200");
+		if (billetes100 > 0)
+			System.out.println(billetes100 + " billetes de 100");
+		if (billetes50 > 0)
+			System.out.println(billetes50 + " billetes de 50");
+		if (billetes20 > 0)
+			System.out.println(billetes20 + " billetes de 20");
+		if (billetes10 > 0)
+			System.out.println(billetes10 + " billetes de 10");
+	}
+
+	void Metodo1() {
 		int montoRecibido;
 		int montoTotal;
 
@@ -55,5 +100,4 @@ public class master {
 
 		} while (str.toLowerCase().equals("fin"));
 	}
-
 }
